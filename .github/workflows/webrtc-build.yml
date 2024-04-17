@@ -16,12 +16,12 @@ on:
       macos:
         description: 'Build macOS libraries'
         required: true
-        default: true
+        default: false
         type: boolean
       maccatalyst:
         description: 'Build macOS Catalyst libraries'
         required: true
-        default: true
+        default: false
         type: boolean
 jobs:
   Build-Script:

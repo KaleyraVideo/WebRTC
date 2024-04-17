@@ -1,11 +1,10 @@
 # WebRTC Binaries for iOS and macOS
-[![Latest version](https://img.shields.io/github/v/release/stasel/webrtc)](https://github.com/stasel/WebRTC/releases)
-[![Release Date](https://img.shields.io/github/release-date/stasel/webrtc)](https://github.com/stasel/WebRTC/releases)
-[![Total Downloads](https://img.shields.io/github/downloads/stasel/webrtc/total)](https://github.com/stasel/WebRTC/releases)
-[![Cocoapods](https://img.shields.io/cocoapods/v/WebRTC-lib)](https://cocoapods.org/pods/WebRTC-lib)
+[![Latest version](https://img.shields.io/github/v/release/stasel/webrtc)](https://github.com/KaleyraVideo/WebRTC/releases)
+[![Release Date](https://img.shields.io/github/release-date/stasel/webrtc)](https://github.com/KaleyraVideo/WebRTC/releases)
 
 
 This repository contains unofficial distribution of WebRTC framework binaries for iOS and macOS.
+Forked [from here](https://github.com/stasel/WebRTC)
 
 Since version M80, Google has [deprecated](https://groups.google.com/g/discuss-webrtc/c/Ozvbd0p7Q1Y/m/M4WN2cRKCwAJ?pli=1) their mobile binary libraries distributions (Was officially using the [GoogleWebRTC pod](https://cocoapods.org/pods/GoogleWebRTC)). To get the most up to date WebRTC library, you can compile it on your own, or you can use precompiled binaries from here or other sources.
 
@@ -40,7 +39,7 @@ Xcode has a built-in support for Swift package manager. You can easily add the p
 Or, you can add the following dependency to your `Package.swift` file:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/stasel/WebRTC.git", .upToNextMajor("123.0.0"))
+    .package(url: "https://github.com/KaleyraVideo/WebRTC.git", .upToNextMajor("123.0.0"))
 ]
 ```
 
@@ -48,7 +47,7 @@ Use the `latest` branch to get the most up to date binary:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/stasel/WebRTC.git", branch: "latest")
+    .package(url: "https://github.com/KaleyraVideo/WebRTC.git", branch: "latest")
 ]
 ```
 
@@ -90,8 +89,6 @@ To import WebRTC to your code add the following import statement
 ```swift
 import WebRTC
 ```
-
-If you wish to see how to use WebRTC I highly recommend checking out my WebRTC demo iOS app: https://github.com/stasel/WebRTC-iOS
 
 
 ## 🛠 Compile your own WebRTC Frameworks
