@@ -43,7 +43,7 @@ def isReleaseAvailable(release):
     return datetime.today() >= (release.releaseDate + timedelta(days=1))
 
 def buildWebRTC(branch):
-    os.environ["BUILD_VP9"] = "true"
+    os.environ["BUILD_VP9"] = "false"
     os.environ["BRANCH"] = branch
     os.environ["IOS"] = "true"
     os.environ["MACOS"] = "false"
@@ -152,18 +152,18 @@ if __name__ == "__main__":
 
     # Change code
     print("➡️ Applying code changes...")
-    os.system(f"sed -i '' -E 's/[0-9]+.0.0\/WebRTC-M[0-9]+/{nextRelease.version}.0.0\/WebRTC-M{nextRelease.version}/g' Package.swift WebRTC-lib.podspec")
-    os.system(f"sed -i '' -E 's/checksum: \"[0-9a-f]+\"/checksum: \"{buildMetadata.checksum}\"/g' Package.swift WebRTC-lib.podspec ")
+    os.system(f"sed -i '' -E 's/[0-9]+.0.0\/WebRTC-M[0-9]+/{nextRelease.version}.0.0\/WebRTC-M{nextRelease.version}/g' Package.swift")
+    os.system(f"sed -i '' -E 's/checksum: \"[0-9a-f]+\"/checksum: \"{buildMetadata.checksum}\"/g' Package.swift")
     os.system(f"sed -i '' -E 's/.upToNextMajor\\(\"[0-9]+.0.0/.upToNextMajor\\(\"{nextRelease.version}.0.0/g' README.md")
-    os.system(f"sed -i '' -E 's/spec.version      = \"[0-9]+.0.0\"/spec.version      = \"{nextRelease.version}.0.0\"/g' WebRTC-lib.podspec")
-    cartageFile = open("WebRTC.json", 'r')
+#    os.system(f"sed -i '' -E 's/spec.version      = \"[0-9]+.0.0\"/spec.version      = \"{nextRelease.version}.0.0\"/g' WebRTC-lib.podspec")
+#    cartageFile = open("WebRTC.json", 'r')
 
-    cartageJSON = json.loads(cartageFile.read())
-    cartageJSON[f'{nextRelease.version}.0.0'] = f'https://github.com/KaleyraVideo/WebRTC/releases/download/{nextRelease.version}.0.0/WebRTC-M{nextRelease.version}.xcframework.zip'
-    cartageFile.close()
-    cartageJSONWrite = open("WebRTC.json", 'w')
-    cartageJSONWrite.write(json.dumps(cartageJSON, indent=4, sort_keys=True))
-    cartageJSONWrite.close()
+#    cartageJSON = json.loads(cartageFile.read())
+#    cartageJSON[f'{nextRelease.version}.0.0'] = f'https://github.com/KaleyraVideo/WebRTC/releases/download/{nextRelease.version}.0.0/WebRTC-M{nextRelease.version}.xcframework.zip'
+#    cartageFile.close()
+#    cartageJSONWrite = open("WebRTC.json", 'w')
+#    cartageJSONWrite.write(json.dumps(cartageJSON, indent=4, sort_keys=True))
+#    cartageJSONWrite.close()
 
 
     # Commit and push
