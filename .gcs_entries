@@ -1,7 +1,7 @@
 {
   "src": {
-    "src/third_party/test_fonts/test_fonts": [
-      "f26f29c9d3bfae588207bbc9762de8d142e58935c62a86f67332819b15203b35"
+    "src/third_party/test_fonts": [
+      "336e775eec536b2d785cc80eff6ac39051931286"
     ]
   },
   "src/buildtools": {
