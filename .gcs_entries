@@ -1,5 +1,11 @@
 {
   "src": {
+    "src/third_party/rust-toolchain": [
+      "Linux_x64/rust-toolchain-009e73825af0e59ad4fc603562e038b3dbd6593a-2-llvmorg-20-init-3847-g69c43468.tar.xz",
+      "Mac/rust-toolchain-009e73825af0e59ad4fc603562e038b3dbd6593a-2-llvmorg-20-init-3847-g69c43468.tar.xz",
+      "Mac_arm64/rust-toolchain-009e73825af0e59ad4fc603562e038b3dbd6593a-2-llvmorg-20-init-3847-g69c43468.tar.xz",
+      "Win/rust-toolchain-009e73825af0e59ad4fc603562e038b3dbd6593a-2-llvmorg-20-init-3847-g69c43468.tar.xz"
+    ],
     "src/third_party/test_fonts/test_fonts": [
       "f26f29c9d3bfae588207bbc9762de8d142e58935c62a86f67332819b15203b35"
     ]
