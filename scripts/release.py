@@ -89,7 +89,7 @@ def createPullRequest(release, head):
         'title': f'Release M{release.version}',
         'head': head,
         'base': 'latest',
-        'body': 'Created by an automated sotfware 🤖'
+        'body': 'Created by an automated software 🤖'
     }
     response = requests.post("https://api.github.com/repos/KaleyraVideo/WebRTC/pulls", json = body, headers = headers)
     success = response.status_code == requests.codes.created
